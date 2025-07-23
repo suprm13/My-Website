@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vistra</title>
+<style>
+  :root {
+    --bg-light: #ffffff;
+    --text-light: #222222;
+    --bg-dark: #121212;
+    --text-dark: #eeeeee;
+  }
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 1rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  header {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  button#themeToggle {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #3f73aa;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  section {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 1px;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: gray;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Vistra</h1>
+  <button id="themeToggle">Switch to Dark Theme</button>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>Edit this text to tell your visitors about your site or yourself.</p>
+  
+  <h2>Gallery</h2>
+  <!-- Add your images here by replacing the src attribute -->
+  <img src="data:image/webp;base64,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" alt="Sample Image 1" />
+  <img src="https://via.placeholder.com/800x400?text=Sample+Image+2" alt="Sample Image 2" />
+
+  <h2>Video</h2>
+  <!-- Replace the src below with your own video URL or file -->
+  <video controls>
+    <source src="https://drive.google.com/file/d/1nGm9Zw0E5pR4eV0CFbqKRYQFU5_nxeD6/view?usp=drive_link" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<footer>
+  &copy; 2025 Your Name. Customize this footer as you want.
+</footer>
+
+<script>
+  const btn = document.getElementById('themeToggle');
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      btn.textContent = 'Light';
+    } else {
+      btn.textContent = 'Dark';
+    }
+  });
+</script>
+
+</body>
+</html>
